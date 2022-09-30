@@ -9,23 +9,6 @@ import { NgForm } from '@angular/forms';
 export class AppComponent {
   title = 'test';
 
-  // day = new Date()
-
-  // name = 'bAlA'
-
-  // num = 23545.34
-
-  // percentage = 0.56
-
-  // curren = 2315245.678
-
-  // obj = {name:'bala', age:'21'}
-
-  // arr=[1,2,3,4]
-
-
-
-
    @ViewChild('userForm') uf:NgForm;
 
     setDefaultValue(){
