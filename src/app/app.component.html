@@ -1,0 +1,124 @@
+<router-outlet></router-outlet>
+<!-- <h1 class="text-center">PIPE</h1>
+
+<div>
+
+ {{day}}
+ DATE: {{day | date:'dd-MM-yy: hh:mm:ss a'}}
+  <br>
+  {{day | date:'MMMM, d, EEEE'}}
+</div>
+
+<div>
+  NAME: {{name |  titlecase}}
+</div>
+
+<div>
+  NUMBER: {{num | number: '6.3-4'}}
+  <br><br>
+
+</div>
+
+<div>
+  PERCENTAGE: {{percentage | percent: '3.1-2'}}
+</div>
+<br><br>
+<div>
+ CURRENCY: {{curren | currency: 'CAD'}}
+ <br><br>
+ CURRENCY: {{curren | currency: 'INR'}}
+ <br><br>
+ CURRENCY: {{curren | currency: 'ERU'}}
+ <br><br>
+ CURRENCY: {{curren | currency: 'CAD': 'symbol-narrow'}}
+ <br><br>
+ CURRENCY: {{curren | currency: 'INR': 'Rs'}}
+</div>
+
+<div>
+  OBJECT: {{obj | json}}
+</div>
+
+<div>
+  ARRAY: {{arr}}
+  <br><br>
+
+  SLICE: {{arr | slice: -2}}
+</div>
+
+<div>
+  KEY_VALUE: {{obj | keyvalue | json}}
+  <br><br>
+  KEY_VALUE: {{obj | keyvalue | json | uppercase}}
+</div>
+<br><br>
+<div>
+  custom_pipe: {{'test' | append}}
+</div> -->
+
+
+<div class="row mt-3 mx-3" style="margin-top:25px ;">
+  <div class="col-md-9 justify-content-center">
+    <div class="card card-custom pb-4">
+      <div class="card-body mt-0 mx-5">
+        <div class="text-center mb-3 pb-2 mt-3">
+          <h4 style="color: #495057 ;">Angular Forms</h4>
+        </div>
+
+        <form (ngSubmit)="onSubmit(userForm)" #userForm="ngForm" class="mb-0">
+
+          <div class="row mb-4">
+            <div class="col">
+              <div class="form-outline">
+                <label class="form-label" for="typeName">Name</label>
+                <input type="name" class="form-control" id="typeName" class="form-control input-custom"
+                 ngModel name="name" required #name="ngModel"/>
+                 <p class="help-block" *ngIf="!name.valid && name.touched">please enter name</p>
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-outline">
+                <label class="form-label" for="typeEmail">Email</label>
+                <input type="email" class="form-control" id="typeEmail" class="form-control input-custom"
+                ngModel name="email" required #email="ngModel"/>
+                <p class="help-block" *ngIf="!email.valid && email.touched">please enter email</p>
+              </div>
+            </div>
+          </div>
+          <div class="row mb-4">
+            <div class="col">
+              <div class="form-outline">
+                <label for="inputState">State</label>
+                <select id="inputState" class="form-control" ngModel name="state"
+                required #s="ngModel">
+                <option selected>Choose...</option>
+                <option *ngFor="let s of state" selected>{{s.state}}</option>
+                </select>
+                <p class="help-block" *ngIf="!s.valid && s.touched">please enter state</p> 
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-outline">
+                <label class="form-label" for="form9Example2">Password</label>
+                <input type="pass" class="form-control" id="form9Example2" class="form-control input-custom"
+                ngModel name="pass" required #pass="ngModel"/>
+                <p class="help-block" *ngIf="!pass.valid && pass.touched">please enter password</p> 
+              </div>
+            </div>
+          </div>         
+          <div class="float-end ">
+            <!-- Submit button -->
+            <button type="submit" class="btn btn-primary btn-rounded"
+            [disabled]="userForm.form.invalid"
+            >Register</button>
+             <br><br>
+            <button type="button" class="btn btn-primary" (click)="setDefaultValue()">setvalue</button>
+            <br><br>
+            <button type="button" class="btn btn-primary" (click)="patchValue()">patchvalue</button>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
