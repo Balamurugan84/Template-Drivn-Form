@@ -1,60 +1,6 @@
 <router-outlet></router-outlet>
-<!-- <h1 class="text-center">PIPE</h1>
 
-<div>
 
- {{day}}
- DATE: {{day | date:'dd-MM-yy: hh:mm:ss a'}}
-  <br>
-  {{day | date:'MMMM, d, EEEE'}}
-</div>
-
-<div>
-  NAME: {{name |  titlecase}}
-</div>
-
-<div>
-  NUMBER: {{num | number: '6.3-4'}}
-  <br><br>
-
-</div>
-
-<div>
-  PERCENTAGE: {{percentage | percent: '3.1-2'}}
-</div>
-<br><br>
-<div>
- CURRENCY: {{curren | currency: 'CAD'}}
- <br><br>
- CURRENCY: {{curren | currency: 'INR'}}
- <br><br>
- CURRENCY: {{curren | currency: 'ERU'}}
- <br><br>
- CURRENCY: {{curren | currency: 'CAD': 'symbol-narrow'}}
- <br><br>
- CURRENCY: {{curren | currency: 'INR': 'Rs'}}
-</div>
-
-<div>
-  OBJECT: {{obj | json}}
-</div>
-
-<div>
-  ARRAY: {{arr}}
-  <br><br>
-
-  SLICE: {{arr | slice: -2}}
-</div>
-
-<div>
-  KEY_VALUE: {{obj | keyvalue | json}}
-  <br><br>
-  KEY_VALUE: {{obj | keyvalue | json | uppercase}}
-</div>
-<br><br>
-<div>
-  custom_pipe: {{'test' | append}}
-</div> -->
 
 
 <div class="row mt-3 mx-3" style="margin-top:25px ;">
@@ -107,6 +53,7 @@
             </div>
           </div>         
           <div class="float-end ">
+            
             <!-- Submit button -->
             <button type="submit" class="btn btn-primary btn-rounded"
             [disabled]="userForm.form.invalid"
